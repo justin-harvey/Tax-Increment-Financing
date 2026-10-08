@@ -8,7 +8,7 @@ routed to a district fund instead of the general fund.
 
 A town-agnostic, interactive demonstration of how a municipal **Tax Increment
 Financing** district can be run as a transparent, independently-verifiable public
-ledger — including the labor and pension conditions a community can attach to the
+ledger, including the labor and pension conditions a community can attach to the
 deal, and the ability for residents and trust funds to check the math themselves.
 
 > **This is a demonstration.** Every figure is illustrative sample data. The
@@ -16,7 +16,7 @@ deal, and the ability for residents and trust funds to check the math themselves
 > legal, financial, or investment advice. The on-chain anchoring is modeled for
 > the demo (see [Verification](#6-verification-model)).
 
-This repo is the **deployable static bundle** (a pre-built static export — no
+This repo is the **deployable static bundle** (a pre-built static export, no
 build step, no server). The product source lives in the main CivicChain repo
 under `app/tif/`.
 
@@ -38,7 +38,7 @@ under `app/tif/`.
 
 ## 1. What this demonstrates
 
-TIF is one of the most common — and most criticized — economic-development tools
+TIF is one of the most common, and most criticized, economic-development tools
 in the United States. The criticism is almost always about **opacity**: residents
 can't see how much public tax revenue was diverted, who received it, what was
 built, or whether the promises attached to the deal were kept.
@@ -84,17 +84,17 @@ increment revenue    = captured increment × (mill rate ÷ 1000) × capture rate
 
 That district fund is used to:
 
-- **Reimburse developers** through a **Credit Enhancement Agreement (CEA)** — the
+- **Reimburse developers** through a **Credit Enhancement Agreement (CEA)**, the
   instrument that hands back a negotiated share of the increment the project
   itself created.
 - **Service TIF bonds** issued to pay for public infrastructure up front.
-- **Pay for public improvements** — roads, utilities, parking, streetscape,
+- **Pay for public improvements**: roads, utilities, parking, streetscape,
   public realm.
 
 The **capture rate** is the policy share of the increment routed into the fund
 (vs. shared back to the general fund). At the end of the district's **term**
 (commonly 20–30 years), the district closes and the **full, grown value returns to
-the normal tax rolls** — the public payoff for the deferral.
+the normal tax rolls**, the public payoff for the deferral.
 
 **A Maine-specific wrinkle worth knowing:** sheltering the captured value also
 lowers the town's *state-reported valuation*, which protects its position in
@@ -108,18 +108,18 @@ This is a real reason Maine municipalities use TIF beyond the direct reimburseme
 A profile selector (top right) and a district selector (Districts tab) drive the
 entire view.
 
-- **Overview** — the selected district's base-vs-captured value composition, an
+- **Overview**: the selected district's base-vs-captured value composition, an
   assessed-value sparkline since designation, mill rate / capture rate / term
   stats, and a **live projection slider**: set an assumed annual growth rate and
   see projected increment revenue across the remaining term.
-- **Districts** — a selectable table of every district on the ledger (captured
+- **Districts**: a selectable table of every district on the ledger (captured
   value, annual revenue, **debt-coverage ratio**, anchor status).
-- **Funding** — the project **capital stack** (developer equity, pension-fund
+- **Funding**: the project **capital stack** (developer equity, pension-fund
   co-investment, CEA, bonds, grants) and, where present, a **pension co-investor**
   card. Below it: the outstanding obligations (CEAs/bonds/grants), coverage ratio,
   and increment-funded public projects.
-- **Labor & benefits** — the centerpiece; see [section 4](#4-the-labor--pension-module-the-research-centerpiece).
-- **Verification** — the anchored fingerprint, ledger tx/block, and an interactive
+- **Labor & benefits**: the centerpiece; see [section 4](#4-the-labor--pension-module-the-research-centerpiece).
+- **Verification**: the anchored fingerprint, ledger tx/block, and an interactive
   **tamper check**.
 
 ---
@@ -131,17 +131,17 @@ tying **pension funds and union-only labor** into a TIF-backed project. That
 phrase maps onto **two distinct, legitimate mechanisms**, and the demo models
 **both as one connected loop.**
 
-### Reading A — labor standards attached to the incentive
+### Reading A: labor standards attached to the incentive
 
-A municipality can condition the CEA on a **Project Labor Agreement (PLA)** — a
+A municipality can condition the CEA on a **Project Labor Agreement (PLA)**, a
 pre-hire collective-bargaining agreement that uses **union signatory contractors
 only**. Those contractors pay **prevailing wage *plus* a fringe-benefit rate**,
 and that fringe is **employer contributions into bona-fide pension, health, and
-training (apprenticeship) funds** — i.e. union **multiemployer (Taft-Hartley)
+training (apprenticeship) funds**, i.e. union **multiemployer (Taft-Hartley)
 pension funds**.
 
 So "pension funds tied into the project" means the TIF-subsidized jobsite is
-**routing real benefit dollars into construction workers' pension funds** — and
+**routing real benefit dollars into construction workers' pension funds**, and
 the incentive can be **clawed back** if the standard isn't met.
 
 The demo models this per district:
@@ -155,15 +155,15 @@ The demo models this per district:
   compliant, anchored payroll is filed. (The "Town Center Housing" district has a
   deliberately non-compliant quarter so you can see the holdback fire.)
 
-### Reading B — a pension fund as a co-investor
+### Reading B: a pension fund as a co-investor
 
 Large public and union pension systems invest in real estate and infrastructure
 as **Economically Targeted Investments (ETIs)** under a **Responsible Contractor
-Policy (RCP)** — a hiring preference for contractors who pay fair wage, **employer-
+Policy (RCP)**, a hiring preference for contractors who pay fair wage, **employer-
 paid health and pension**, and run apprenticeships (in practice, union labor).
 
 The demo puts a **pension fund inside the capital stack** on the Funding tab, with
-its commitment, vintage, target return, and RCP flag — so you can see the fund
+its commitment, vintage, target return, and RCP flag, so you can see the fund
 *financing* the project, not just receiving benefit contributions from it.
 
 ### The loop
@@ -210,7 +210,7 @@ was actually remitted.
 > **Honesty note for engineering review:** in this standalone demo the fingerprint
 > is a fast deterministic hash (FNV-1a) computed in the browser, and ledger
 > tx/block identifiers are illustrative. It demonstrates the *verification UX and
-> data model* — anchor a canonical record, let anyone recompute and compare — not
+> data model*: anchor a canonical record, let anyone recompute and compare, not
 > a live blockchain write. The production CivicChain platform is where real
 > anchoring lives.
 
@@ -237,28 +237,28 @@ mechanics hold up to scrutiny.
   "significant long-term employment," "public benefits for other workers," and
   "supports local contractors and suppliers / job training / internships."
 - **Labor clause**: an applicant must not have "engaged in illegal or unfair labor
-  and employment practices" — the statutory hook a community uses to attach labor
+  and employment practices", the statutory hook a community uses to attach labor
   standards.
 
 **Maine statute:**
 
-- Municipal TIF — **30-A M.R.S. §5221–5235**; affordable-housing TIF — **§5245+**
+- Municipal TIF: **30-A M.R.S. §5221–5235**; affordable-housing TIF: **§5245+**
   (higher capture allowed).
 - **Employment TIF (ETIF)** is a *separate* state program that reimburses a share
-  of **state income-tax withholding** for net-new jobs — distinct from the
+  of **state income-tax withholding** for net-new jobs, distinct from the
   property-tax TIF modeled here (a natural future district type).
-- **Prevailing wage** — **26 M.R.S. Chapter 15**: an hourly wage *plus* a fringe-
+- **Prevailing wage**, **26 M.R.S. Chapter 15**: an hourly wage *plus* a fringe-
   benefit rate, where the fringe is paid as employer contributions into bona-fide
   pension/health plans (or cash equivalent).
 
 **Pension + labor mechanisms:**
 
-- **Project Labor Agreements (PLAs)** — pre-hire CBAs that set union wages and
+- **Project Labor Agreements (PLAs)**: pre-hire CBAs that set union wages and
   benefits for a project.
-- **Responsible Contractor Policies** — adopted by the largest public pension
+- **Responsible Contractor Policies**: adopted by the largest public pension
   funds (e.g., NY State Common Retirement Fund, CalPERS) to prefer contractors
   paying fair wage + employer-paid health + pension + training.
-- **Economically Targeted Investments** — pension allocations (e.g., NYC's ~2%)
+- **Economically Targeted Investments**: pension allocations (e.g., NYC's ~2%)
   directed to local/workforce housing; union housing investment trusts channel
   pension capital into union-built affordable housing.
 
@@ -268,9 +268,9 @@ mechanics hold up to scrutiny.
 
 **Deploy (static, no build):**
 
-- **Netlify** — publish directory `.` (repo root), no build command. `netlify.toml`
+- **Netlify**: publish directory `.` (repo root), no build command. `netlify.toml`
   is already set. Or drag the repo folder onto the Netlify "Sites" page.
-- **Any static host** (GitHub Pages, Cloudflare Pages, S3, nginx) — serve the repo
+- **Any static host** (GitHub Pages, Cloudflare Pages, S3, nginx), serve the repo
   root at the domain root. Asset paths are absolute (`/_next/...`, `/brand/...`),
   so the bundle must sit at the root, not a subpath.
 - `index.html` is the exported demo served at `/`; it is fully client-rendered, so
@@ -296,13 +296,13 @@ CivicChain's shared design system. No runtime backend.
 
 ## 9. Sources
 
-- [City of Bangor — Tax Increment Financing & Credit Enhancement Agreement Policy (PDF)](https://www.bangormaine.gov/DocumentCenter/View/3044/CED---Tax-increment-Financing-TIF-Policy-PDF)
-- [City of Bangor — TIF Project Application (PDF)](https://www.bangormaine.gov/DocumentCenter/View/3060/Housing---Tax-Increment-Financing-Application-PDF)
-- [Tax Increment Financing in Maine — Michael Walker, Maine Law Review](https://digitalcommons.mainelaw.maine.edu/cgi/viewcontent.cgi?article=1455&context=mlr)
-- [Tax increment financing (Maine) — Wikipedia](https://en.wikipedia.org/wiki/Tax_increment_financing_(Maine))
-- [Employment Tax Increment Financing — Maine DECD](https://www.maine.gov/decd/business-development/tax-incentives-credit/employment-tax-incentive-financing)
-- [Maine Prevailing Wage (26 M.R.S. Ch. 15) — Maine DOL](https://www.maine.gov/labor/labor_stats/publications/wagerateconst/prevailingwage/index.shtml)
-- [Project Labor Agreements — AFL-CIO](https://aflcio.org/what-unions-do/empower-workers/project-labor-agreements)
-- [Pension Fund Responsible Contractor Policy — AFL-CIO](https://aflcio.org/about/leadership/statements/pension-fund-responsible-contractor-policy)
-- [Responsible Contractor Policy — NY State Comptroller (PDF)](https://osc.state.ny.us/pension/responsible-contractor-policy.pdf)
-- [Economically Targeted Investments — NYC Comptroller](https://comptroller.nyc.gov/services/financial-matters/pension/responsible-investing/economically-targeted-investments/)
+- [City of Bangor: Tax Increment Financing & Credit Enhancement Agreement Policy (PDF)](https://www.bangormaine.gov/DocumentCenter/View/3044/CED---Tax-increment-Financing-TIF-Policy-PDF)
+- [City of Bangor: TIF Project Application (PDF)](https://www.bangormaine.gov/DocumentCenter/View/3060/Housing---Tax-Increment-Financing-Application-PDF)
+- [Tax Increment Financing in Maine: Michael Walker, Maine Law Review](https://digitalcommons.mainelaw.maine.edu/cgi/viewcontent.cgi?article=1455&context=mlr)
+- [Tax increment financing (Maine): Wikipedia](https://en.wikipedia.org/wiki/Tax_increment_financing_(Maine))
+- [Employment Tax Increment Financing: Maine DECD](https://www.maine.gov/decd/business-development/tax-incentives-credit/employment-tax-incentive-financing)
+- [Maine Prevailing Wage (26 M.R.S. Ch. 15): Maine DOL](https://www.maine.gov/labor/labor_stats/publications/wagerateconst/prevailingwage/index.shtml)
+- [Project Labor Agreements: AFL-CIO](https://aflcio.org/what-unions-do/empower-workers/project-labor-agreements)
+- [Pension Fund Responsible Contractor Policy: AFL-CIO](https://aflcio.org/about/leadership/statements/pension-fund-responsible-contractor-policy)
+- [Responsible Contractor Policy: NY State Comptroller (PDF)](https://osc.state.ny.us/pension/responsible-contractor-policy.pdf)
+- [Economically Targeted Investments: NYC Comptroller](https://comptroller.nyc.gov/services/financial-matters/pension/responsible-investing/economically-targeted-investments/)
