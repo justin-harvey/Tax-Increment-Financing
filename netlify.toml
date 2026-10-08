@@ -1,0 +1,5 @@
+[build]
+  publish = "."
+
+# Static export of the Civic-Chain TIF demo. No build step: Netlify serves
+# these files as-is. index.html is the exported /tif route, served at root.
