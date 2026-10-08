@@ -1,4 +1,10 @@
-# Civic-Chain — Tax Increment Financing (TIF) Demo
+# Civic-Chain: Tax Increment Financing (TIF) Demo
+
+Deployed at: https://tax-increment-financing.netlify.app/
+
+How TIF works: freeze assessed value at designation = base; growth above it = 
+captured assessed value (CAV); the mill rate on the CAV = increment revenue,
+routed to a district fund instead of the general fund.
 
 A town-agnostic, interactive demonstration of how a municipal **Tax Increment
 Financing** district can be run as a transparent, independently-verifiable public
