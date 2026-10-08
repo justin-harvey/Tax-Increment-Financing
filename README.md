@@ -285,8 +285,16 @@ npm run build
 cp out/tif.html  <this-repo>/index.html
 cp out/404.html  <this-repo>/404.html
 rm -rf <this-repo>/_next && cp -r out/_next <this-repo>/_next
+
+# brand assets referenced by the page (logo, favicon, OG, wordmark)
 cp out/brand/civic-chain-logo.svg out/brand/civic-chain-social-preview.webp \
-   out/brand/favico.png  <this-repo>/brand/
+   out/brand/favico.png out/brand/civic-logo-w-text-horizontal.svg  <this-repo>/brand/
+
+# design-system assets the brand pass uses (banknote texture, proof stamp, scene wash)
+cp out/design-assets/bg-textures/texture-banknote-coarse.webp  <this-repo>/design-assets/bg-textures/
+cp out/design-assets/stamps/stamp-budget-verified-12.webp      <this-repo>/design-assets/stamps/
+cp out/design-assets/scenes-colored/colored-random-classical-courthouse-tree-line-art.webp \
+   <this-repo>/design-assets/scenes-colored/
 ```
 
 **Stack:** Next.js (App Router) static export, React, Tailwind CSS v4,
